@@ -875,7 +875,7 @@ def heatmap(self, x=None, y=None, z=None, what="count(*)", vwhat=None, reduce=["
     if show:
         plt.show()
     if return_extra:
-        return im, grid, fgrid, ngrid, rgrid
+        return im, plt, fig
     else:
         return im
     # colorbar = None
