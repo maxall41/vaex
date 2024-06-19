@@ -452,6 +452,9 @@ def heatmap(self, x=None, y=None, z=None, what="count(*)", vwhat=None, reduce=["
             shape = (z_shape,) + shape
             vshape = (z_shape,) + vshape
             logger.debug("x = %r", x)
+            print("ZLIMITS",z_limits)
+            print("ZLIMITS0",z_limits[0])
+            print("ZLIMITS0",z_limits[1])
             values = np.linspace(z_limits[0], z_limits[1], num=z_shape + 1)
             labels["z"] = list(["%s <= %s < %s" % (v1, z_expression, v2) for v1, v2 in zip(values[:-1], values[1:])])
         else:
